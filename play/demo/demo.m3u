@@ -1,0 +1,9 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="bastak-demo-1" tvg-logo="https://bastak.au/play/demo/logo.png" group-title="Bastak Play demo",Demo 1 - Welcome (MP4)
+https://bastak.au/play/demo/demo-1-welcome.mp4
+#EXTINF:-1 tvg-id="bastak-demo-2" tvg-logo="https://bastak.au/play/demo/logo.png" group-title="Bastak Play demo",Demo 2 - Audio and subtitle tracks (MKV)
+https://bastak.au/play/demo/demo-2-tracks.mkv
+#EXTINF:-1 tvg-id="bastak-demo-3" tvg-logo="https://bastak.au/play/demo/logo.png" group-title="Bastak Play demo",Demo 3 - Colour bars (MP4)
+https://bastak.au/play/demo/demo-3-colour-bars.mp4
+#EXTINF:-1 tvg-id="apple-hls-test" tvg-logo="https://bastak.au/play/demo/logo.png" group-title="Apple test streams",Apple HLS test stream (live-style)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8
