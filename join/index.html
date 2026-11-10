@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Join your family – Tak Calendar</title><meta name="description" content="Join your family's calendar on Tak Calendar with an invite code.">
+<meta name="robots" content="noindex"><link rel="stylesheet" href="/style.css">
+<style>
+.code{font:800 2.4rem/1.1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;margin:.2em 0 .5em}
+.open{display:inline-block;background:#2546B8;color:#fff;font-weight:800;font-size:1.1rem;padding:15px 28px;border-radius:14px;text-decoration:none}
+.open:hover{filter:brightness(1.1)}
+</style></head><body>
+<header><div class="wrap"><a class="brand" href="/">bastak<span>.</span></a>
+<nav><a href="/calendar/">Tak Calendar</a><a href="/reader/">Bastak Reader</a><a href="/play/">Bastak Play</a><a href="mailto:support@bastak.au">Contact</a></nav></div></header>
+<main><div class="wrap">
+<h1>Join your family on Tak Calendar</h1>
+<div class="card" id="has-code" hidden>
+<h2>Your invite code</h2>
+<div class="code" id="code"></div>
+<p><a class="open" id="open" href="#">Open Tak Calendar</a></p>
+<p class="muted">On your iPhone or iPad, tap the button: Tak Calendar opens, you sign in if you haven’t yet, and you say which person you are.</p>
+</div>
+<div class="card" id="no-code" hidden>
+<h2>This link is missing its code</h2>
+<p>Ask for the invite again, or open Tak Calendar, choose <strong>Join my family</strong> and type the code you were sent.</p>
+</div>
+<div class="card">
+<h2>Don’t have Tak Calendar yet?</h2>
+<p>Tak Calendar is being tested with a few families before it comes to the App Store. Ask the person who invited you for the TestFlight link and install it. Then come back to this page and tap <strong>Open Tak Calendar</strong> — or open the app, choose <strong>Join my family</strong> and type the code.</p>
+</div>
+<p class="muted">Invites last 7 days; if a code doesn’t work, ask for a new one. This page doesn’t keep or send anything — the code is only in the link. <a href="/calendar/privacy/">Privacy policy</a></p>
+</div></main>
+<script>
+(function () {
+  var raw = new URLSearchParams(location.search).get("code") || "";
+  var code = raw.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  if (/^[ABCDEFGHJKMNPQRSTUVWXYZ2-9]{8}$/.test(code)) {
+    document.getElementById("code").textContent = code.slice(0, 4) + "-" + code.slice(4);
+    document.getElementById("open").href = "takcalendar://join?code=" + code;
+    document.getElementById("has-code").hidden = false;
+  } else {
+    document.getElementById("no-code").hidden = false;
+  }
+})();
+</script>
+</body></html>
